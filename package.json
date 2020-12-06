@@ -1,0 +1,26 @@
+{
+  "name": "oi-bff",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js"
+  },
+  "repository": "git@github.com:carloshskp/oi-bff.git",
+  "author": "Carlos Bernardes <contato@carloshb.com.br>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cpf-cnpj-validator": "^1.0.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.4",
+    "rate-limiter-flexible": "^2.1.13",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

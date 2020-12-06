@@ -1,0 +1,21 @@
+FROM node:10.23.0-alpine
+
+ENV APPLICATION_DIR .
+ENV APPLICATION_LOG_DIR /logs
+ENV NODE_ENV production
+ENV PORT 80
+
+RUN mkdir -p \
+	$APPLICATION_LOG_DIR
+
+ADD package.json $APPLICATION_DIR/package.json
+
+WORKDIR $APPLICATION_DIR
+
+ADD . $APPLICATION_DIR
+
+RUN yarn
+
+EXPOSE $PORT
+
+CMD ["yarn", "start"]
